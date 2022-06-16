@@ -1,0 +1,113 @@
+header {
+  display: grid;
+  width: 100vw;
+  height: 64px;
+  background-color: #181818;
+  justify-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+.l-wrap {
+  display: grid;
+  /*width: 70vw;*/
+  max-width: 1140px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+}
+
+.logoSection {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: start;
+  grid-template-columns: 48px 1fr;
+  column-gap: 10px;
+}
+
+.imgLogoWrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+:link:not(a.headerNavigationLink):hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+a.imgLogoLink {
+  height: 53px;
+}
+
+.logoText {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+a.logoTextLink>span {
+  font-size: 32px;
+}
+
+.navbarSection {
+  display: grid;
+  grid-column-start: 8;
+  grid-column-end: 12;
+}
+
+nav.headerNavigation {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-column-gap: 20px;
+  justify-self: start;
+}
+
+.headerNavigationElement {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+a.headerNavigationLink {
+  color: white;
+  text-decoration: none;
+}
+
+a.headerNavigationLink>span {
+  font-size: 16px;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+}
+
+a.headerNavigationLink>span:hover {
+  color: #CF3F93;
+}
+
+.loginSection {
+  display: grid;
+  justify-self: end;
+  justify-content: center;
+  align-items: center;
+  grid-column-end: 13;
+}
+
+.loginSection :hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.loginButton {
+  background: linear-gradient(to right, #25ABDF, #3FE297);
+  padding: 10px 26px;
+  border-radius: 25px;
+}
+
+.loginButton>span {
+  font-size: 14px;
+  color: white;
+}
