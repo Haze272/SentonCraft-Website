@@ -6,6 +6,12 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(src/assets/img/backgrounds/background3.png);
+  background-size: cover;
+  height: 100vh;
+}
+
 *,
 *:before,
 *:after {
@@ -14,4 +20,9 @@ html {
 
 application {
   font-family: 'Inter', sans-serif;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
 }

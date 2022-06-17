@@ -1,3 +1,14 @@
-class ProductService {}
+export class Product {
+  constructor(
+    public id: number,
+    public title: string,
+    public price: number
+  ) {
+  }
+}
 
-class Product {}
+export class ProductService {
+  getProduct(): Product {
+    return new Product(0, "Карифская пыльца", 29);
+  }
+}
