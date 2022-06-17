@@ -74,6 +74,27 @@ export class ProductService {
       "price": 29,
       "description": "Lorem Huyorem",
       "image_url": "./assets/img/minecraft-items/processor_d_1.png"
+    },
+    {
+      "id": 8,
+      "title": "Слиток першелиума",
+      "price": 25,
+      "description": "Lorem Huyorem",
+      "image_url": "./assets/img/minecraft-items/pershellium_ingot.png"
+    },
+    {
+      "id": 9,
+      "title": "Атмосферная пыль",
+      "price": 9,
+      "description": "Lorem Huyorem",
+      "image_url": "./assets/img/minecraft-items/atmospheric_dust.png"
+    },
+    {
+      "id": 10,
+      "title": "Кремень нестий",
+      "price": 9,
+      "description": "Lorem Huyorem",
+      "image_url": "./assets/img/minecraft-items/nestium_silicon.png"
     }
   ];
 }
