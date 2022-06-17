@@ -5,17 +5,31 @@ import { ApplicationComponent } from './components/application/application.compo
 import { HeaderComponent } from './components/header/header.component';
 import ProductItemComponent from './components/product-item/product-item.component';
 import {ProductService} from "./services/product-service";
+import {RouterModule} from "@angular/router";
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot([
+      {path: '',                    component: HomeComponent},
+      {path: 'products/:prodTitle', component: ProductDetailComponent}
+
+    ])
+  ],
   declarations: [
     ApplicationComponent,
     HeaderComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    ProductDetailComponent,
+    HomeComponent
   ],
-  imports: [
-    BrowserModule
+  providers: [
+    ProductService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
-  providers: [],
   bootstrap: [ApplicationComponent]
 })
 export class AppModule { }

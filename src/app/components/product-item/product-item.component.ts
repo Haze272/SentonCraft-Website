@@ -7,6 +7,25 @@ import {Product} from "../../services/product-service";
   styleUrls: ['./product-item.component.css']
 })
 export default class ProductItemComponent {
-  //@Input() product: Product;
+  private _quantity: number = 1;
+  @Input() product: Product;
+
+  get quantity(): number {
+    return this._quantity;
+  }
+
+  set quantity(value: number) {
+    this._quantity = value;
+  }
+
+  increase_quantity() {
+    this._quantity++;
+  }
+
+  decrease_quantity() {
+    if (this._quantity > 1) {
+      this._quantity--;
+    }
+  }
 
 }

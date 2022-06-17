@@ -1,0 +1,13 @@
+.product-container {
+  display: grid;
+  width: 90vw;
+  max-width: 1140px;
+  /*grid-template-columns: repeat(4, 1fr);*/
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  background-color: rgba(36, 36, 36, 0.7);
+  margin-top: 36px;
+  padding: 20px;
+  justify-content: center;
+}

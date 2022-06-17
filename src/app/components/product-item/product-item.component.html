@@ -1,22 +1,23 @@
 <div class="product-item-wrapper">
   <div class="product-info-part">
     <div class="product-round">
-      <img src="/assets/img/minecraft-items/crystal.png" alt="">
+      <!--<img src="/assets/img/minecraft-items/crystal.png" alt="">-->
+      <img src="{{ product.icon_url }}" alt="">
     </div>
   </div>
   <div class="product-info-part">
-    <p class="title"><!--{{ product.title }}--></p>
+    <p class="title">{{ product.title }}</p>
   </div>
   <div class="product-info-part">
-    <p>Цена: <!--{{ product.price }} рублей--></p>
+    <p>Цена: {{ product.price }} рублей</p>
   </div>
   <div class="product-info-part">
     <div class="product-quantity-menu">
-      <button type="button" class="product-btn">-</button>
+      <button on-click="decrease_quantity()" type="button" class="product-btn">-</button>
       <div class="quantity-count">
-        <span>1</span>
+        <span>{{ quantity }}</span>
       </div>
-      <button type="button" class="product-btn">+</button>
+      <button on-click="increase_quantity()" type="button" class="product-btn">+</button>
     </div>
     <button type="button" class="product-add-to-cart-btn product-btn">Добавить в корзину</button>
   </div>
