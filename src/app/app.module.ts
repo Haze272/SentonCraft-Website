@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { ApplicationComponent } from './components/application/application.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -17,7 +18,8 @@ import { HomeComponent } from './components/home/home.component';
       {path: '',                    component: HomeComponent},
       {path: 'products/:prodTitle', component: ProductDetailComponent}
 
-    ])
+    ]),
+    MatSidenavModule
   ],
   declarations: [
     ApplicationComponent,
