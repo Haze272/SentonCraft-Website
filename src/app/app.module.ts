@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ApplicationComponent } from './components/application/application.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,6 +10,12 @@ import {RouterModule} from "@angular/router";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HomeComponent } from './components/home/home.component';
+import { HeaderExperementialComponent } from './components/navigation/header-experemential/header-experemential.component';
+import {MatTabsModule} from "@angular/material/tabs";
+import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MaterialModule} from "./material/material-module";
+
 
 @NgModule({
   imports: [
@@ -19,14 +25,18 @@ import { HomeComponent } from './components/home/home.component';
       {path: 'products/:prodTitle', component: ProductDetailComponent}
 
     ]),
-    MatSidenavModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule
   ],
   declarations: [
     ApplicationComponent,
     HeaderComponent,
     ProductItemComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderExperementialComponent,
+    SidenavListComponent
   ],
   providers: [
     ProductService,
