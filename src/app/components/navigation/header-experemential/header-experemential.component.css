@@ -7,18 +7,63 @@ a:hover, a:active{
   color: lightgray;
 }
 
+a.imgLogoLink {
+  height: 50px;
+}
+
 .navigation-items{
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
+.imgLogoWrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+:link:not(a.headerNavigationLink):hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+a.imgLogoLink {
+  height: 53px;
+}
+
+.logoText {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+
 mat-toolbar{
   border-radius: 3px;
+  height: 60px;
+  background-color: #242424;
+}
+
+.headerButton {
+  justify-self: flex-end;
+}
+
+.example-spacer {
+  display: none;
 }
 
 @media(max-width: 959px){
   mat-toolbar{
     border-radius: 0px;
   }
+
+  .example-spacer {
+    display: block;
+    flex: 1 1 auto;
+  }
+}
+
+mat-icon {
+  fill: white;
 }
