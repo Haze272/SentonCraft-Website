@@ -1,11 +1,56 @@
 export class Product {
-  constructor(
-    public id: number,
-    public title: string,
-    public price: number,
-    public description: string,
-    public icon_url: string
-  ) {
+  private _id: number;
+  private _title: string;
+  private _price: number;
+  private _description: string;
+  private _icon_url: string;
+
+  constructor(id: number, title: string, price: number, description: string, icon_url?: string) {
+    this._id = id;
+    this._title = title;
+    this._price = price;
+    this._description = description;
+    this._icon_url = icon_url ?? "./assets/img/minecraft-items/nemezida_crystal.png";
+  }
+
+  get id(): number {
+    return this._id;
+  }
+
+  set id(value: number) {
+    this._id = value;
+  }
+
+  get title(): string {
+    return this._title;
+  }
+
+  set title(value: string) {
+    this._title = value;
+  }
+
+  get price(): number {
+    return this._price;
+  }
+
+  set price(value: number) {
+    this._price = value;
+  }
+
+  get description(): string {
+    return this._description;
+  }
+
+  set description(value: string) {
+    this._description = value;
+  }
+
+  get icon_url(): string {
+    return this._icon_url;
+  }
+
+  set icon_url(value: string) {
+    this._icon_url = value;
   }
 }
 
@@ -95,6 +140,12 @@ export class ProductService {
       "price": 9,
       "description": "Lorem Huyorem",
       "image_url": "./assets/img/minecraft-items/nestium_silicon.png"
+    },
+    {
+      "id": 11,
+      "title": "Скрижаль",
+      "price": 9,
+      "description": "Lorem Huyorem"
     }
   ];
 }
