@@ -32,3 +32,10 @@ p {
   margin: 0px;
   padding: 0px;
 }
+
+.mat-drawer-backdrop {
+  background-color: black;
+  opacity: 0.2;
+  transition-duration: 0ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
