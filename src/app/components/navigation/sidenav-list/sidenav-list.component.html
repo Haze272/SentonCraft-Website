@@ -1,22 +1,28 @@
 <mat-nav-list>
   <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
-    <mat-icon>home</mat-icon> <span class="nav-caption">Главная</span>
+    <mat-icon [ngStyle]="{'color': '#ededed'}">home</mat-icon> <span class="nav-caption">Главная</span>
   </a>
   <a mat-list-item routerLink="/owner" (click)="onSidenavClose()">
-    <mat-icon>play_circle_filled</mat-icon> <span class="nav-caption">Играть</span>
+    <mat-icon [ngStyle]="{'color': '#ededed'}">play_circle_filled</mat-icon> <span class="nav-caption">Играть</span>
   </a>
   <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>description</mat-icon><span class="nav-caption">Правила</span>
+    <mat-icon [ngStyle]="{'color': '#ededed'}">description</mat-icon><span class="nav-caption">Правила</span>
   </a>
   <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>dns</mat-icon><span class="nav-caption">Сервера</span>
+    <mat-icon [ngStyle]="{'color': '#ededed'}">dns</mat-icon><span class="nav-caption">Сервера</span>
   </a>
   <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>account_balance</mat-icon><span class="nav-caption">Донат</span>
+    <mat-icon [ngStyle]="{'color': '#ededed'}">account_balance</mat-icon><span class="nav-caption">Донат</span>
   </a>
   <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>account_balance</mat-icon><span class="nav-caption">FAQ</span>
+    <mat-icon [ngStyle]="{'color': '#ededed'}">account_balance</mat-icon><span class="nav-caption">FAQ</span>
   </a>
+  <span class="example-spacer"></span>
+  <div class="loginSection">
+    <div class="loginButton">
+      <span>Войти</span>
+    </div>
+  </div>
   <!--
   <mat-list-item [matMenuTriggerFor]="menu">
     <mat-icon>unfold_more</mat-icon>

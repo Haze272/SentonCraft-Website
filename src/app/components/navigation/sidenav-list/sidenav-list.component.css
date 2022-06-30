@@ -4,7 +4,7 @@ a{
 }
 
 a:hover, a:active{
-  color: lightgray;
+  opacity: 0.8;
 }
 
 .nav-caption{
@@ -16,4 +16,36 @@ a:hover, a:active{
 mat-nav-list {
   background-color: #242424;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.example-spacer {
+  display: block;
+  flex: 1 1 auto;
+}
+
+.loginSection {
+  display: grid;
+  align-self: start;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.loginSection :hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.loginButton {
+  background: linear-gradient(to right, #25ABDF, #3FE297);
+  padding: 10px 26px;
+  border-radius: 25px;
+}
+
+.loginButton>span {
+  font-size: 14px;
+  color: white;
 }
