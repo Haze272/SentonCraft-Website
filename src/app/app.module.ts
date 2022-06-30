@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ApplicationComponent } from './components/application/application.component';
-import { HeaderComponent } from './components/header/header.component';
 import ProductItemComponent from './components/product-item/product-item.component';
 import {ProductService} from "./services/product-service";
 import {RouterModule} from "@angular/router";
@@ -31,7 +30,6 @@ import {MaterialModule} from "./material/material-module";
   ],
   declarations: [
     ApplicationComponent,
-    HeaderComponent,
     ProductItemComponent,
     ProductDetailComponent,
     HomeComponent,
