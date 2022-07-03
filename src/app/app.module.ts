@@ -15,6 +15,7 @@ import { SidenavListComponent } from './components/navigation/sidenav-list/siden
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MaterialModule} from "./material/material-module";
 import {CartService} from "./services/cart-service";
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -22,8 +23,8 @@ import {CartService} from "./services/cart-service";
     BrowserModule,
     RouterModule.forRoot([
       {path: '',                    component: HomeComponent},
-      {path: 'products/:prodTitle', component: ProductDetailComponent}
-
+      {path: 'products/:prodTitle', component: ProductDetailComponent},
+      {path: 'cart',                component: CartComponent}
     ]),
     BrowserAnimationsModule,
     MaterialModule,
@@ -35,7 +36,8 @@ import {CartService} from "./services/cart-service";
     ProductDetailComponent,
     HomeComponent,
     HeaderExperementialComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    CartComponent
   ],
   providers: [
     ProductService,

@@ -1,9 +1,9 @@
 export class Product {
-  private _id: number;
-  private _title: string;
-  private _price: number;
-  private _description: string;
-  private _icon_url: string;
+  _id: number;
+  _title: string;
+  _price: number;
+  _description: string;
+  _icon_url: string;
 
   constructor(id: number, title: string, price: number, description: string, icon_url?: string) {
     this._id = id;

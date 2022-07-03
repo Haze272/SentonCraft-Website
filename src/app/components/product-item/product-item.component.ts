@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Product} from "../../services/product-service";
+import {CartService} from "../../services/cart-service";
 
 @Component({
   selector: 'app-product-item',
@@ -9,6 +10,14 @@ import {Product} from "../../services/product-service";
 export default class ProductItemComponent {
   private _quantity: number = 1;
   @Input() product: Product;
+
+  constructor(public cartService: CartService) {
+  }
+
+  addToCart(product: Product) {
+    window.alert(this._quantity + ' ' + product.title.toLowerCase() + ' был успешно добавлен в корзину!');
+    this.cartService.addToCart(product, this._quantity);
+  }
 
   get quantity(): number {
     return this._quantity;
