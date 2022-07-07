@@ -10,12 +10,13 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderExperementialComponent } from './components/navigation/header-experemential/header-experemential.component';
-import {MatTabsModule} from "@angular/material/tabs";
 import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MaterialModule} from "./material/material-module";
 import {CartService} from "./services/cart-service";
 import { CartComponent } from './components/cart/cart.component';
+import { CartNotificationComponent } from './components/cart-notification/cart-notification.component';
+import {CartNotificationService} from "./services/cart-notification-service";
 
 
 @NgModule({
@@ -37,11 +38,13 @@ import { CartComponent } from './components/cart/cart.component';
     HomeComponent,
     HeaderExperementialComponent,
     SidenavListComponent,
-    CartComponent
+    CartComponent,
+    CartNotificationComponent
   ],
   providers: [
     ProductService,
     CartService,
+    CartNotificationService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [ApplicationComponent]

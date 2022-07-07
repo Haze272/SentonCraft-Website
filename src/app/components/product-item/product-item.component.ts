@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Product} from "../../services/product-service";
 import {CartService} from "../../services/cart-service";
+import {CartNotificationModel, CartNotificationService} from "../../services/cart-notification-service";
 
 @Component({
   selector: 'app-product-item',
@@ -11,11 +12,14 @@ export default class ProductItemComponent {
   private _quantity: number = 1;
   @Input() product: Product;
 
-  constructor(public cartService: CartService) {
+  constructor(
+    public cartService: CartService,
+    public cartNotificationService:CartNotificationService
+  ) {
   }
 
   addToCart(product: Product) {
-    window.alert(this._quantity + ' ' + product.title.toLowerCase() + ' был успешно добавлен в корзину!');
+    this.cartNotificationService.showToast(new CartNotificationModel("header", this._quantity + ' ' + product.title.toLowerCase() + ' был успешно добавлен в корзину!'));
     this.cartService.addToCart(product, this._quantity);
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Product, ProductService} from "../../services/product-service";
+import {CartNotificationModel, CartNotificationService} from "../../services/cart-notification-service";
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,14 @@ import {Product, ProductService} from "../../services/product-service";
 export class HomeComponent {
   products: Product[] = [];
 
-  constructor(private productService: ProductService) {
+  constructor(
+    private productService: ProductService,
+    private cartNotificationService: CartNotificationService
+  ) {
     this.products = this.productService.getProducts();
+  }
+
+  public showToast(header: string, description: string) {
+    this.cartNotificationService.showToast(new CartNotificationModel(header,description));
   }
 }
