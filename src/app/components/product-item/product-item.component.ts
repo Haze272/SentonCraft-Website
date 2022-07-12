@@ -21,6 +21,7 @@ export default class ProductItemComponent {
   addToCart(product: Product) {
     this.cartNotificationService.showToast(new CartNotificationModel("header", this._quantity + ' ' + product.title.toLowerCase() + ' был успешно добавлен в корзину!'));
     this.cartService.addToCart(product, this._quantity);
+    this._quantity = 1;
   }
 
   get quantity(): number {

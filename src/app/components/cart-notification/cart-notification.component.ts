@@ -15,7 +15,7 @@ export class CartNotificationComponent {
         this.notifications.add(notification);
         setTimeout(()=> {
           this.closeNotification(notification);
-        }, 1500);
+        }, 1300);
       });
   }
 
