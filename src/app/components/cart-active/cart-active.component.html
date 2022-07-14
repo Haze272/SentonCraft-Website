@@ -2,10 +2,10 @@
   fxLayout="row"
   fxLayoutAlign="space-around center">
   <div class="content">
-    <span>{{ quantity }} блоков на сумму</span>
+    <span>{{ quantity }} блоков на сумму {{ price }} рублей</span>
   </div>
   <div class="close-wrapper">
-    <a class="close-button" (click)="goToCart()">Перейти в корзину</a>
+    <a class="close-button" routerLink="/cart">Перейти в корзину</a>
   </div>
 </div>
 

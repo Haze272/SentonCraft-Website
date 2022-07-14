@@ -9,14 +9,11 @@ import {Router} from "@angular/router";
 })
 export class CartActiveComponent {
   quantity: number = 0;
+  price: number = 0;
 
-  constructor(public cartService: CartService,
-              private router: Router) {
+  constructor(public cartService: CartService) {
     this.quantity = cartService.totalQuantity;
-  }
-
-  public goToCart() {
-    this.router.navigate(['cart']);
+    this.price = cartService.totalPrice;
   }
 
 }

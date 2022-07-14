@@ -3,6 +3,7 @@ import {Product} from "./product-service";
 export class CartService {
   items = new Map<Product, number>();
   totalQuantity: number = 0;
+  totalPrice: number = 0;
 
   addToCart(product: Product, quantity: number) {
     if (this.items.has(product)) {
@@ -14,6 +15,7 @@ export class CartService {
       this.items.set(product, quantity);
     }
     this.totalQuantity += quantity;
+    this.totalPrice += product.price * quantity;
   }
 
   getItems() {
