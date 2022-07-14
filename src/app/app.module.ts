@@ -17,6 +17,7 @@ import {CartService} from "./services/cart-service";
 import { CartComponent } from './components/cart/cart.component';
 import { CartNotificationComponent } from './components/cart-notification/cart-notification.component';
 import {CartNotificationService} from "./services/cart-notification-service";
+import { CartActiveComponent } from './components/cart-active/cart-active.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {CartNotificationService} from "./services/cart-notification-service";
     HeaderExperementialComponent,
     SidenavListComponent,
     CartComponent,
-    CartNotificationComponent
+    CartNotificationComponent,
+    CartActiveComponent
   ],
   providers: [
     ProductService,

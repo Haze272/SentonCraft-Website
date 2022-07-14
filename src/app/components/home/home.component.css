@@ -14,5 +14,11 @@
 app-cart-notification {
   position: fixed;
   top: 65px;
+}
 
+app-cart-active {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
 }
