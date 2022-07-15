@@ -1,69 +1,28 @@
-export class Product {
-  _id: number;
-  _title: string;
-  _price: number;
-  _description: string;
-  _icon_url: string;
-
-  constructor(id: number, title: string, price: number, description: string, icon_url?: string) {
-    this._id = id;
-    this._title = title;
-    this._price = price;
-    this._description = description;
-    this._icon_url = icon_url ?? "./assets/img/minecraft-items/nemezida_crystal.png";
-  }
-
-  get id(): number {
-    return this._id;
-  }
-
-  set id(value: number) {
-    this._id = value;
-  }
-
-  get title(): string {
-    return this._title;
-  }
-
-  set title(value: string) {
-    this._title = value;
-  }
-
-  get price(): number {
-    return this._price;
-  }
-
-  set price(value: number) {
-    this._price = value;
-  }
-
-  get description(): string {
-    return this._description;
-  }
-
-  set description(value: string) {
-    this._description = value;
-  }
-
-  get icon_url(): string {
-    return this._icon_url;
-  }
-
-  set icon_url(value: string) {
-    this._icon_url = value;
-  }
+export interface Product {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  icon_url: string;
 }
 
 export class ProductService {
-  getProduct(): Product {
-    return new Product(0, "Карифская пыльца", 29, "tururum", "./assets/img/minecraft-items/gamma_crystal.png");
+
+  addProduct(id: number, title: string, price: number, description: string,icon_url?: string) {
+    this.products.push({
+      id: id,
+      title: title,
+      price: price,
+      description: description,
+      icon_url: icon_url ?? "./assets/img/minecraft-items/nemezida_crystal.png";
+    })
   }
 
   getProducts(): Array<Product> {
-    return this.products.map(p => new Product(p.id, p.title, p.price, p.description, p.image_url));
+    return this.products;
   }
 
-  products = [
+  products: Product[] = [
     {
       "id": 0,
       "title": "Энергетический меч",
