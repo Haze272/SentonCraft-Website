@@ -1,0 +1,55 @@
+section.playTile {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.72);
+  max-width: 768px;
+}
+
+.playTile {
+  display: grid;
+  row-gap: 14px;
+}
+
+h2 {
+  color: #2B2B2B;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+.playInstruction {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.listItem > a {
+  margin-left: 20px;
+}
+
+.listItem img:hover {
+  opacity: .8;
+}
+
+p {
+  font-weight: 200;
+  font-size: 18px;
+}
+
+p > span {
+  color: #FF04AA;
+}
+
+.enjoyGameSignWrapper {
+  margin-top: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+span.enjoyGameSign {
+  font-weight: 300;
+  font-size: 24px;
+  color: #1A1A1A;
+  margin: 0 auto;
+}

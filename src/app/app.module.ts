@@ -8,7 +8,7 @@ import {ProductService} from "./services/product-service";
 import {RouterModule} from "@angular/router";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { HomeComponent } from './components/home/home.component';
+import { ShopComponent } from './components/show/shop.component';
 import { HeaderExperementialComponent } from './components/navigation/header-experemential/header-experemential.component';
 import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
@@ -18,6 +18,11 @@ import { CartComponent } from './components/cart/cart.component';
 import { CartNotificationComponent } from './components/cart-notification/cart-notification.component';
 import {CartNotificationService} from "./services/cart-notification-service";
 import { CartActiveComponent } from './components/cart-active/cart-active.component';
+import { HomeComponent } from './components/home/home.component';
+import { PlayComponent } from './components/play/play.component';
+import { ServersComponent } from './components/servers/servers.component';
+import { RulesComponent } from './components/rules/rules.component';
+import {FAQComponent} from "./components/faq/faq.component";
 
 
 @NgModule({
@@ -25,8 +30,13 @@ import { CartActiveComponent } from './components/cart-active/cart-active.compon
     BrowserModule,
     RouterModule.forRoot([
       {path: '',                    component: HomeComponent},
+      {path: 'play',                component: PlayComponent},
+      {path: 'rules',               component: RulesComponent},
+      {path: 'server-list',         component: ServersComponent},
+      {path: 'shop',                component: ShopComponent},
       {path: 'products/:prodTitle', component: ProductDetailComponent},
-      {path: 'cart',                component: CartComponent}
+      {path: 'cart',                component: CartComponent},
+      {path: 'faq',                 component: FAQComponent}
     ]),
     BrowserAnimationsModule,
     MaterialModule,
@@ -36,12 +46,17 @@ import { CartActiveComponent } from './components/cart-active/cart-active.compon
     ApplicationComponent,
     ProductItemComponent,
     ProductDetailComponent,
-    HomeComponent,
+    ShopComponent,
     HeaderExperementialComponent,
     SidenavListComponent,
     CartComponent,
     CartNotificationComponent,
-    CartActiveComponent
+    CartActiveComponent,
+    HomeComponent,
+    PlayComponent,
+    ServersComponent,
+    RulesComponent,
+    FAQComponent
   ],
   providers: [
     ProductService,

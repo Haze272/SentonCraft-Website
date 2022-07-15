@@ -1,7 +1,27 @@
-<app-cart-notification></app-cart-notification>
-<div class="product-container">
-  <div *ngFor="let product of products">
-    <app-product-item [product]="product"></app-product-item>
-  </div>
+<div class="homeSectionWrapper">
+  <div class="ghost"></div>
+  <section class="tilesHolder">
+    <div class="headerTile tile">
+      <h1>Мы любим своих игроков</h1>
+    </div>
+    <div class="playersOnlineTile">
+      <div class="playerOnlineSign">
+        <span id="playerOnline"><b>70</b></span>
+        <span>игроков онлайн</span>
+      </div>
+    </div>
+    <div class="serverDescriptionTile">
+      <h2>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, recusandae!
+      </h2>
+      <span>
+        Dictumst tellus viverra hendrerit lectus nisl, massa nullam eu ultricies.
+      </span>
+    </div>
+    <div class="startPlayTile">
+      <a routerLink="/play">
+        <h2>Начать играть</h2>
+      </a>
+    </div>
+  </section>
 </div>
-<app-cart-active></app-cart-active>

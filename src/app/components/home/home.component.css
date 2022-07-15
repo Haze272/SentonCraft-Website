@@ -1,24 +1,80 @@
-.product-container {
+.homeSectionWrapper {
   display: grid;
-  width: 90vw;
-  max-width: 1140px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-column-gap: 30px;
-  grid-row-gap: 20px;
-  background-color: rgba(36, 36, 36, 0.7);
-  margin-top: 36px;
-  padding: 20px;
+  width: 100vw;
+  grid-template-rows: 4fr 3fr;
+}
+
+section.tilesHolder {
+  display: grid;
+  align-self: end;
+  grid-template-columns: 5fr 2fr;
+  grid-auto-rows: 80px 80px 80px;
+  max-width: 60vw;
+  padding-bottom: 15vh;
+}
+
+section.tilesHolder>div:not(.startPlayTile){
+  display: grid;
   justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  padding: 5px;
 }
 
-app-cart-notification {
-  position: fixed;
-  top: 65px;
+.headerTile {
+  background-color: #181818;
+  color: white;
 }
 
-app-cart-active {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
+.headerTile>h1 {
+  font-weight: 300;
+  font-size: 36px
+}
+
+.playersOnlineTile {
+  background-color: #DEDEDE;
+  grid-template-columns: auto;
+}
+
+.playerOnlineSign {
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+}
+
+.serverDescriptionTile {
+  background-color: #DEDEDE;
+  margin-left: 100px;
+  height: 160px;
+  font-size: 14px;
+  grid-row: 2/3;
+}
+
+.startPlayTile {
+  background-color: #C570EA;
+  display: grid;
+  opacity: 0.8;
+}
+
+.startPlayTile :hover {
+  cursor: pointer;
+}
+
+.startPlayTile:hover {
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.startPlayTile>a {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.startPlayTile h2 {
+  color: white;
+  font-weight: 300;
+  font-size: 24px;
 }
