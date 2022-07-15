@@ -1,7 +1,9 @@
-<h3>Cart</h3>
+<h3>Корзина</h3>
 
-<div class="cart-item" *ngFor="let item of items | keyvalue">
-  <span>{{ item.key.title }} </span>
-  <span>{{ item.value }} </span>
-  <span>{{ item.key.price * item.value }}</span>
+<div class="product-container">
+  <div class="cart-item" *ngFor="let item of items | keyvalue">
+    <span>{{ item.key.title }} </span>
+    <span>{{ item.value }} </span>
+    <span>{{ item.key.price * item.value }}</span>
+  </div>
 </div>

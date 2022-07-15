@@ -1,0 +1,17 @@
+h3 {
+  color: white;
+  fw
+}
+
+.product-container {
+  display: grid;
+  width: 90vw;
+  max-width: 1140px;
+  grid-template-rows: repeat(auto-fit, 100px);
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  background-color: rgba(36, 36, 36, 0.7);
+  margin-top: 36px;
+  padding: 20px;
+  justify-content: center;
+}
