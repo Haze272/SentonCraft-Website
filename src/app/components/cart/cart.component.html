@@ -1,6 +1,11 @@
 <h3>Корзина</h3>
 
 <div class="product-container">
+  <div class="cart-item">
+    <span>Название товара</span>
+    <span>Количество</span>
+    <span>Цена</span>
+  </div>
   <div class="cart-item" *ngFor="let item of items | keyvalue">
     <span>{{ item.key.title }} </span>
     <span>{{ item.value }} </span>

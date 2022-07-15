@@ -1,17 +1,28 @@
 h3 {
   color: white;
-  fw
+  font-weight: 700;
+  font-size: 28px;
 }
 
 .product-container {
   display: grid;
   width: 90vw;
   max-width: 1140px;
-  grid-template-rows: repeat(auto-fit, 100px);
   grid-column-gap: 30px;
   grid-row-gap: 20px;
   background-color: rgba(36, 36, 36, 0.7);
   margin-top: 36px;
   padding: 20px;
-  justify-content: center;
+  justify-content: start;
+  grid-template-columns: 1fr;
+}
+
+.cart-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+}
+
+.cart-item > span {
+  color: #d9d9d9;
 }
