@@ -1,27 +1,39 @@
 <mat-nav-list>
-  <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+  <a mat-list-item routerLink="/" (click)="onSidenavClose()">
     <mat-icon [ngStyle]="{'color': '#ededed'}">home</mat-icon>
-    <a routerLink="/"><span class="nav-caption">Главная</span></a>
+    <a class="sidenavLink" routerLink="/" routerLinkActive="activeLink">
+      Главная
+    </a>
   </a>
-  <a mat-list-item routerLink="/owner" (click)="onSidenavClose()">
+  <a mat-list-item routerLink="/play" (click)="onSidenavClose()">
     <mat-icon [ngStyle]="{'color': '#ededed'}">play_circle_filled</mat-icon>
-    <a routerLink="/play"><span class="nav-caption">Играть</span></a>
+    <a class="sidenavLink" routerLink="/play" routerLinkActive="activeLink">
+      Играть
+    </a>
   </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+  <a mat-list-item routerLink="/rules" (click)="onSidenavClose()">
     <mat-icon [ngStyle]="{'color': '#ededed'}">description</mat-icon>
-    <a routerLink="/rules"><span class="nav-caption">Правила</span></a>
+    <a class="sidenavLink" routerLink="/rules" routerLinkActive="activeLink">
+      Правила
+    </a>
   </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+  <a mat-list-item routerLink="/server-list" (click)="onSidenavClose()">
     <mat-icon [ngStyle]="{'color': '#ededed'}">dns</mat-icon>
-    <a routerLink="/server-list"><span class="nav-caption">Сервера</span></a>
+    <a class="sidenavLink" routerLink="/server-list" routerLinkActive="activeLink">
+      Сервера
+    </a>
   </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+  <a mat-list-item  routerLink="/shop" (click)="onSidenavClose()">
     <mat-icon [ngStyle]="{'color': '#ededed'}">account_balance</mat-icon>
-    <a routerLink="/shop"><span class="nav-caption">Донат</span></a>
+    <a class="sidenavLink" routerLink="/shop" routerLinkActive="activeLink">
+      Донат
+    </a>
   </a>
-  <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+  <a mat-list-item routerLink="/faq" (click)="onSidenavClose()">
     <mat-icon [ngStyle]="{'color': '#ededed'}">account_balance</mat-icon>
-    <a routerLink="/faq"><span class="nav-caption">FAQ</span></a>
+    <a class="sidenavLink" routerLink="/faq" routerLinkActive="activeLink">
+      FAQ
+    </a>
   </a>
   <span class="example-spacer"></span>
   <div class="loginSection">

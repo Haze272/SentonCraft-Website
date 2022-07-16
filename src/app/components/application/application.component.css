@@ -16,10 +16,14 @@ main {
 
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
   height: 100%;
+  overflow-x: hidden;
 }
+
 mat-sidenav {
   width: 250px;
 }
+/*
 main {
   padding: 10px;
 }
+*/

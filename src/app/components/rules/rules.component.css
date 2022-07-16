@@ -1,0 +1,92 @@
+section.server-rules {
+  width: 100%;
+  background-color: #333333;
+  display: grid;
+  justify-content: center;
+}
+
+.rulesContainer {
+  margin-top: 40px;
+  min-width: 50vw;
+  max-width: 968px;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+h3 {
+  color: white;
+  font-size: 28px;
+}
+
+.rulesWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+/*
+nav.rulesHeaders {
+  display: grid;
+  grid-row-gap: 10px;
+  max-height: 230px;
+}
+
+button {
+  min-width: 180px;
+  height: 50px;
+  background-color: #666666;
+  color: white;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: white;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #888888;
+  color: white;
+}
+
+button.active {
+  background-color: #ff98f9;
+  color: #1A1A1A;
+}
+
+button.active:hover {
+  background-color: #ff98f9;
+  color: #1A1A1A;
+}
+*/
+
+mat-button-toggle-group {
+  min-width: 180px;
+  gap: 10px;
+}
+
+.mat-button-toggle-checked {
+  background-color: #ff98f9;
+  color: #1A1A1A;
+}
+
+mat-button-toggle {
+  height: 50px;
+  background-color: #666666;
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.rulesContent > p {
+  color: white;
+  font-weight: 300;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
