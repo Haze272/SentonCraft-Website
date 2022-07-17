@@ -20,6 +20,8 @@ export class CartService {
     }
     this.totalQuantity += quantity;
     this.totalPrice += product.price * quantity;
+    this.onAddedQuantity.next(quantity);
+    this.onAddedPrice.next(quantity * product.price);
   }
 
   getItems() {
