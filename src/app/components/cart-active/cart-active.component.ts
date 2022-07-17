@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CartService} from "../../services/cart-service";
 import {Router} from "@angular/router";
+import {SharedService} from "../../services/shared-service";
 
 @Component({
   selector: 'app-cart-active',
@@ -14,6 +15,10 @@ export class CartActiveComponent {
   constructor(public cartService: CartService) {
     this.quantity = cartService.totalQuantity;
     this.price = cartService.totalPrice;
+
+    this.cartService.messageSource.subscribe((message: number) => {
+      this.quantity += message; // => Hello from child 1!
+    });
   }
 
 }

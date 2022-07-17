@@ -82,6 +82,8 @@ mat-button-toggle {
   display: grid;
   justify-content: center;
   align-items: center;
+  grid-template-rows: 1fr;
+  font-weight: 600;
 }
 
 .rulesContent > p {

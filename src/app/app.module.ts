@@ -7,8 +7,7 @@ import ProductItemComponent from './components/product-item/product-item.compone
 import {ProductService} from "./services/product-service";
 import {RouterModule} from "@angular/router";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ShopComponent } from './components/show/shop.component';
+import { ShopComponent } from './components/shop/shop.component';
 import { HeaderExperementialComponent } from './components/navigation/header-experemential/header-experemential.component';
 import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
@@ -23,6 +22,7 @@ import { PlayComponent } from './components/play/play.component';
 import { ServersComponent } from './components/servers/servers.component';
 import { RulesComponent } from './components/rules/rules.component';
 import {FAQComponent} from "./components/faq/faq.component";
+import {SharedService} from "./services/shared-service";
 
 
 @NgModule({
@@ -34,7 +34,6 @@ import {FAQComponent} from "./components/faq/faq.component";
       {path: 'rules',               component: RulesComponent},
       {path: 'server-list',         component: ServersComponent},
       {path: 'shop',                component: ShopComponent},
-      {path: 'products/:prodTitle', component: ProductDetailComponent},
       {path: 'cart',                component: CartComponent},
       {path: 'faq',                 component: FAQComponent}
     ]),
@@ -45,7 +44,6 @@ import {FAQComponent} from "./components/faq/faq.component";
   declarations: [
     ApplicationComponent,
     ProductItemComponent,
-    ProductDetailComponent,
     ShopComponent,
     HeaderExperementialComponent,
     SidenavListComponent,

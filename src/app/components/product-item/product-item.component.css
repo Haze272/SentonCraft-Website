@@ -66,3 +66,7 @@ button.product-btn:hover {
   background-color: rgba(231, 50, 223, 0.7);
   color: white;
 }
+
+p {
+  text-align: center;
+}

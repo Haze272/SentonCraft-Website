@@ -1,7 +1,8 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Product} from "../../services/product-service";
 import {CartService} from "../../services/cart-service";
 import {CartNotificationModel, CartNotificationService} from "../../services/cart-notification-service";
+import {SharedService} from "../../services/shared-service";
 
 @Component({
   selector: 'app-product-item',
@@ -22,6 +23,7 @@ export default class ProductItemComponent {
     this.cartNotificationService.showToast(new CartNotificationModel("header", this._quantity + ' ' + product.title.toLowerCase() + ' был успешно добавлен в корзину!'));
     this.cartService.addToCart(product, this._quantity);
     this._quantity = 1;
+    this.cartService.messageSource.next(this._quantity);
   }
 
   get quantity(): number {

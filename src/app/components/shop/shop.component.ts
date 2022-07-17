@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Product, ProductService} from "../../services/product-service";
 import {CartNotificationModel, CartNotificationService} from "../../services/cart-notification-service";
 
 @Component({
-  selector: 'app-show',
+  selector: 'app-shop',
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.css']
 })
