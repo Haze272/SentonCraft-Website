@@ -14,8 +14,12 @@ export class CartActiveComponent {
     this.quantity = cartService.totalQuantity;
     this.price = cartService.totalPrice;
 
-    this.cartService.messageSource.subscribe((message: number) => {
-      this.quantity += message; // => Hello from child 1!
+    this.cartService.onAddedQuantity.subscribe((messageQuantity: number) => {
+      this.quantity += messageQuantity;
+    });
+
+    this.cartService.onAddedPrice.subscribe((messagePrice: number) => {
+      this.price += messagePrice;
     });
   }
 

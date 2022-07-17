@@ -6,7 +6,8 @@ export class CartService {
   totalQuantity: number = 0;
   totalPrice: number = 0;
 
-  messageSource: BehaviorSubject<number> = new BehaviorSubject(0);
+  onAddedQuantity: BehaviorSubject<number> = new BehaviorSubject(0);
+  onAddedPrice: BehaviorSubject<number> = new BehaviorSubject(0);
 
   addToCart(product: Product, quantity: number) {
     if (this.items.has(product)) {
