@@ -1,7 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CartService} from "../../services/cart-service";
-import {Router} from "@angular/router";
-import {SharedService} from "../../services/shared-service";
 
 @Component({
   selector: 'app-cart-active',

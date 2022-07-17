@@ -2,7 +2,6 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Product} from "../../services/product-service";
 import {CartService} from "../../services/cart-service";
 import {CartNotificationModel, CartNotificationService} from "../../services/cart-notification-service";
-import {SharedService} from "../../services/shared-service";
 
 @Component({
   selector: 'app-product-item',

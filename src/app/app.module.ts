@@ -22,7 +22,6 @@ import { PlayComponent } from './components/play/play.component';
 import { ServersComponent } from './components/servers/servers.component';
 import { RulesComponent } from './components/rules/rules.component';
 import {FAQComponent} from "./components/faq/faq.component";
-import {SharedService} from "./services/shared-service";
 
 
 @NgModule({
