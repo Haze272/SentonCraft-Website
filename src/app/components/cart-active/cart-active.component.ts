@@ -11,8 +11,6 @@ export class CartActiveComponent {
   price: number = 0;
 
   constructor(public cartService: CartService) {
-    //this.quantity = cartService.totalQuantity;
-    //this.price = cartService.totalPrice;
 
     this.cartService.onAddedQuantity.subscribe((messageQuantity: number) => {
       this.quantity += messageQuantity;
@@ -21,6 +19,9 @@ export class CartActiveComponent {
     this.cartService.onAddedPrice.subscribe((messagePrice: number) => {
       this.price += messagePrice;
     });
+
+    this.quantity = cartService.onAddedQuantity.getValue();
+    this.price = cartService.onAddedPrice.getValue();
   }
 
 }

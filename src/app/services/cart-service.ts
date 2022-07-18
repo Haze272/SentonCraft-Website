@@ -18,10 +18,10 @@ export class CartService {
     } else {
       this.items.set(product, quantity);
     }
-    this.totalQuantity += quantity;
-    this.totalPrice += product.price * quantity;
-    this.onAddedQuantity.next(quantity);
-    this.onAddedPrice.next(quantity * product.price);
+    //this.totalQuantity += quantity;
+    //this.totalPrice += product.price * quantity;
+    //this.onAddedQuantity.next(quantity);
+    //this.onAddedPrice.next(quantity * product.price);
   }
 
   getItems() {
