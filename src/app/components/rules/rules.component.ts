@@ -1,4 +1,6 @@
 import { Component} from '@angular/core';
+import {concat} from "rxjs";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-rules',
@@ -6,7 +8,13 @@ import { Component} from '@angular/core';
   styleUrls: ['./rules.component.css']
 })
 export class RulesComponent {
+  rules: number;
 
-  constructor() { }
+  constructor() {
+    this.rules = 1;
+  }
 
+  showRule(number: number) {
+    this.rules = number;
+  }
 }
