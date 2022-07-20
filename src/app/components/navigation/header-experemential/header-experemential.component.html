@@ -30,9 +30,10 @@
     </ul>
   </div>
   <div class="loginSection" fxHide.xs>
-    <div class="loginButton">
-      <span>Войти</span>
-    </div>
+    <button class="loginButton"
+            (click)="openDialog()">
+      Войти
+    </button>
   </div>
   <div fxHide.gt-xs class="headerButton">
     <button mat-icon-button (click)="onToggleSidenav()">

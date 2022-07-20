@@ -22,6 +22,8 @@ import { PlayComponent } from './components/play/play.component';
 import { ServersComponent } from './components/servers/servers.component';
 import { RulesComponent } from './components/rules/rules.component';
 import {FAQComponent} from "./components/faq/faq.component";
+import { LoginComponent } from './components/login/login.component';
+import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import {FAQComponent} from "./components/faq/faq.component";
     ]),
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule
   ],
   declarations: [
     ApplicationComponent,
@@ -53,7 +56,8 @@ import {FAQComponent} from "./components/faq/faq.component";
     PlayComponent,
     ServersComponent,
     RulesComponent,
-    FAQComponent
+    FAQComponent,
+    LoginComponent
   ],
   providers: [
     ProductService,
@@ -61,6 +65,7 @@ import {FAQComponent} from "./components/faq/faq.component";
     CartNotificationService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
-  bootstrap: [ApplicationComponent]
+  bootstrap: [ApplicationComponent],
+  entryComponents: [LoginComponent]
 })
 export class AppModule { }

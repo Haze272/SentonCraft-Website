@@ -75,10 +75,6 @@ mat-toolbar{
   background: linear-gradient(to right, #25ABDF, #3FE297);
   padding: 10px 26px;
   border-radius: 25px;
-}
-
-.loginButton>span {
-  font-size: 14px;
   color: white;
 }
 
