@@ -24,24 +24,30 @@ import { RulesComponent } from './components/rules/rules.component';
 import {FAQComponent} from "./components/faq/faq.component";
 import { LoginComponent } from './components/login/login.component';
 import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule} from "@angular/forms";
+import {OverlayModule} from "@angular/cdk/overlay";
 
 
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: '',                    component: HomeComponent},
-      {path: 'play',                component: PlayComponent},
-      {path: 'rules',               component: RulesComponent},
-      {path: 'server-list',         component: ServersComponent},
-      {path: 'shop',                component: ShopComponent},
-      {path: 'cart',                component: CartComponent},
-      {path: 'faq',                 component: FAQComponent}
+      {path: '', component: HomeComponent},
+      {path: 'play', component: PlayComponent},
+      {path: 'rules', component: RulesComponent},
+      {path: 'server-list', component: ServersComponent},
+      {path: 'shop', component: ShopComponent},
+      {path: 'cart', component: CartComponent},
+      {path: 'faq', component: FAQComponent}
     ]),
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    OverlayModule
   ],
   declarations: [
     ApplicationComponent,

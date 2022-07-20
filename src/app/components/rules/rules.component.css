@@ -30,6 +30,16 @@ h3 {
   gap: 20px;
 }
 
+@media screen and (max-width: 1000px) {
+  .headerWrapper {
+    margin-left: 8px;
+  }
+
+  .rulesWrapper {
+    flex-direction: column;
+  }
+}
+
 mat-button-toggle-group {
   min-width: 180px;
   gap: 10px;
@@ -56,4 +66,12 @@ mat-button-toggle {
   font-weight: 300;
   margin-top: 7px;
   margin-bottom: 7px;
+}
+
+@media screen and (max-width: 1000px) {
+  .rulesContent {
+    padding-left: 10px;
+    margin-right: 10px;
+  }
+
 }

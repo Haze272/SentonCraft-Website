@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {LoginComponent} from "../../login/login.component";
-import {MatDialog, MAT_DIALOG_DATA, MatDialogConfig} from '@angular/material/dialog';
+import {DialogService} from "../../../services/dialog/dialog-service";
+
 
 @Component({
   selector: 'app-header-experemential',
@@ -15,6 +16,14 @@ export class HeaderExperementialComponent {
     this.sidenavToggle.emit();
   }
 
-  openDialog(): void{
+  constructor(private dialog: DialogService) {}
+
+  openLogin() {
+    const dialogRef = this.dialog.open(LoginComponent, { data: 'John' });
+
+    dialogRef.afterClosed().subscribe(() => {
+      // Subscription runs after the dialog closes
+      console.log('Dialog closed!');
+    });
   }
 }
