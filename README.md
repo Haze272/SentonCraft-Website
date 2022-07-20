@@ -1,5 +1,7 @@
-# Angular Minecraft Shop
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
-
-Пет-проект - сайт-магазин внутриигровых предметов на вымышленном сервере. 
+# Angular Minecraft
+---
+Этот репозиторий представляет из себя веб-приложение на Angular вымышленного сайта для сервера в Minecraft. На сайте реализован встроенный магазин внутриигровых предметов и личный кабинет.
+---
+## Скриншоты:
+![Главная](https://github.com/Haze272/Angular-Minecraft/screenshots/main_page)
+![Магазин](https://github.com/Haze272/Angular-Minecraft/screenshots/shop)
