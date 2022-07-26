@@ -21,7 +21,6 @@ import { HomeComponent } from './components/home/home.component';
 import { PlayComponent } from './components/play/play.component';
 import { ServersComponent } from './components/servers/servers.component';
 import { RulesComponent } from './components/rules/rules.component';
-import {FAQComponent} from "./components/faq/faq.component";
 import { LoginComponent } from './components/login/login.component';
 import {MatDialogActions, MatDialogModule} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -38,8 +37,7 @@ import {OverlayModule} from "@angular/cdk/overlay";
       {path: 'rules', component: RulesComponent},
       {path: 'server-list', component: ServersComponent},
       {path: 'shop', component: ShopComponent},
-      {path: 'cart', component: CartComponent},
-      {path: 'faq', component: FAQComponent}
+      {path: 'cart', component: CartComponent}
     ]),
     BrowserAnimationsModule,
     MaterialModule,
@@ -62,7 +60,6 @@ import {OverlayModule} from "@angular/cdk/overlay";
     PlayComponent,
     ServersComponent,
     RulesComponent,
-    FAQComponent,
     LoginComponent
   ],
   providers: [
