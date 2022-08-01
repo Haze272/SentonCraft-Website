@@ -26,3 +26,7 @@ h3 {
 .cart-item > span {
   color: #d9d9d9;
 }
+
+.cart-header {
+  font-weight: bold;
+}

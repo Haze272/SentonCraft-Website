@@ -1,3 +1,5 @@
+import {Injectable} from "@angular/core";
+
 export interface Product {
   id: number;
   title: string;

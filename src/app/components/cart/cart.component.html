@@ -1,7 +1,7 @@
 <h3>Корзина</h3>
 
 <div class="product-container">
-  <div class="cart-item">
+  <div class="cart-item cart-header">
     <span>Название товара</span>
     <span>Количество</span>
     <span>Цена</span>
@@ -10,5 +10,10 @@
     <span>{{ item.key.title }} </span>
     <span>{{ item.value }} </span>
     <span>{{ item.key.price * item.value }}</span>
+  </div>
+  <div class="cart-item cart-header">
+    <span></span>
+    <span>Итого:</span>
+    <span>{{ totalPrice }}</span>
   </div>
 </div>

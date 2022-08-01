@@ -1,13 +1,20 @@
-import {Product} from "./product-service";
+import {Product, ProductService} from "./product-service";
 import {BehaviorSubject} from "rxjs";
+import {Injectable} from "@angular/core";
 
+@Injectable()
 export class CartService {
   items = new Map<Product, number>();
-  totalQuantity: number = 0;
-  totalPrice: number = 0;
 
   onAddedQuantity: BehaviorSubject<number> = new BehaviorSubject(0);
   onAddedPrice: BehaviorSubject<number> = new BehaviorSubject(0);
+
+
+  constructor(productService :ProductService) {
+    for (let product of productService.getProducts()) {
+      this.addToCart(product, getRandomInt(1, 20));
+    }
+  }
 
   addToCart(product: Product, quantity: number) {
     if (this.items.has(product)) {
@@ -18,10 +25,6 @@ export class CartService {
     } else {
       this.items.set(product, quantity);
     }
-    //this.totalQuantity += quantity;
-    //this.totalPrice += product.price * quantity;
-    //this.onAddedQuantity.next(quantity);
-    //this.onAddedPrice.next(quantity * product.price);
   }
 
   getItems() {
@@ -33,4 +36,14 @@ export class CartService {
     return this.items;
   }
 
+  addMockProducts() {
+
+  }
+
+}
+
+function getRandomInt(min: number, max :number) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
