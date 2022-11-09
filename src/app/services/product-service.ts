@@ -9,22 +9,11 @@ export interface Product {
 }
 
 export class ProductService {
-
-  addProduct(id: number, title: string, price: number, description: string,icon_url?: string) {
-    this.products.push({
-      id: id,
-      title: title,
-      price: price,
-      description: description,
-      icon_url: icon_url ?? "./assets/img/minecraft-items/nemezida_crystal.png"
-    })
-  }
-
   getProducts(): Array<Product> {
-    return this.products;
+    return this.mockProducts;
   }
 
-  products: Product[] = [
+  mockProducts: Product[] = [
     {
       "id": 0,
       "title": "Энергетический меч",
