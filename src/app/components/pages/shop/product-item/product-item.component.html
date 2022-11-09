@@ -1,0 +1,23 @@
+<div class="product-item-wrapper">
+  <div class="product-info-part">
+    <div class="product-round">
+      <img src="{{ product.icon_url }}" alt="">
+    </div>
+  </div>
+  <div class="product-info-part">
+    <p class="title">{{ product.title }}</p>
+  </div>
+  <div class="product-info-part">
+    <p>Цена: {{ product.price }} рублей</p>
+  </div>
+  <div class="product-info-part">
+    <div class="product-quantity-menu">
+      <button on-click="decrease_quantity()" type="button" class="product-btn">-</button>
+      <div class="quantity-count">
+        <span>{{ quantity }}</span>
+      </div>
+      <button on-click="increase_quantity()" type="button" class="product-btn">+</button>
+    </div>
+    <button (click)="addToCart(product)" type="button" class="product-add-to-cart-btn product-btn">Добавить в корзину</button>
+  </div>
+</div>
